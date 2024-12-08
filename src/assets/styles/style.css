@@ -9,7 +9,6 @@
 /* Общий стиль для параграфов */
 .paragraph {
     font-size: 16px;
-    font-style: normal;
     line-height: 26px;
     color: #1F3F68;
 }
@@ -24,6 +23,7 @@
 .header-2 {
     font-weight: 500;
     font-size: 44px;
+    font-style: normal;
     text-align: center;
 }
 
