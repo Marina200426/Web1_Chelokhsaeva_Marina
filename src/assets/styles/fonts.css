@@ -11,7 +11,7 @@
     font-family: "Inter";
     src: local('Inter Italic'), local('Inter-Italic'),
         url("/static/fonts/Inter-Italic.ttf") format("truetype"),
-        url("/static/fonts/Inter-Italic.woff2") format("woff");
+        url("/static/fonts/Inter-Italic.woff") format("woff");
     font-weight: 400;
     font-style: italic;
 }
@@ -29,7 +29,7 @@
     font-family: "Inter";
     src: local('Inter Bold Italic'), local('Inter-BoldItalic'),
         url("/static/fonts/Inter-BoldItalic.ttf") format("truetype"),
-        url("/static/fonts/Inter-BoldItalic.woff2") format("woff");
+        url("/static/fonts/Inter-BoldItalic.woff") format("woff");
     font-weight: 700;
     font-style: italic;
 }
