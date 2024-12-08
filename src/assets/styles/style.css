@@ -11,21 +11,19 @@
     font-size: 16px;
     line-height: 26px;
     color: #1F3F68;
-    font-style: normal;
 
 }
 
 /* Стиль для заголовка h1 */
 .header-1 {
     font-size: 64px;
-    font-style: normal;
+    font-style: italic;
     color: #1F3F68;
 }
 
 /* Стиль для заголовка h2 */
 .header-2 {
     font-weight: 500;
-    font-style: normal;
     font-size: 44px;
     text-align: center;
 }
