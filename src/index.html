@@ -1,18 +1,306 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="/src/assets/styles/style.css">
-</head>
-<body>
-<div class="test" style="color: blue">
-    test
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
-<script src="index.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Разделение сайта на блоки</title>
+  <style>
+
+    hr {
+      margin: 20px 0;
+      border: 0;
+      border-top: 1px solid #ccc;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <h3>IT Website</h3>
+    <nav>
+      <ul>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Media</a></li>
+        <li><a href="#">Cases</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+
+<section class="introduction">
+  <div class="text-section">
+    <h1>Development of mobile applications and web services of any complexity</h1>
+    <p>We create mobile applications for iOS, Android, and other platforms to transform your business into a modern
+      digital solution.</p>
+  </div>
+
+  <div class="form-section">
+    <form>
+      <h4>Leave your contacts and we will call you back within 30 minutes</h4>
+      <label for="contact-phone">Phone number</label>
+      <input type="tel" id="contact-phone" name="phone" placeholder="Phone">
+      <label for="fullname">Full name</label>
+      <input type="text" id="fullname" name="name" placeholder="Your Full Name">
+      <button type="submit">Get a callback</button>
+    </form>
+  </div>
+
+  <div class="image-section">
+    <img src="../img/example_mobile_app.png" alt="Mobile apps preview">
+  </div>
+</section>
+
+  <hr>
+
+<section class="technologies">
+  <div class="tech-description">
+    <h2>Full development cycle</h2>
+    <p>We use proven technologies</p>
+
+    <h4>Web</h4>
+    <p>PHP / JavaScript / Node.JS / Web Socket / Socket.io / Vue.js / Nuxt / MySQL / Laravel / GO lang / Django / Python
+    </p>
+
+    <h4>Mobile</h4>
+    <p>Swift / Kotlin / Alamofire / Firebase / CoreData / Room / Realm / Coroutine / RxJava / RxSwift / Unit Test /
+      Navigation</p>
+  </div>
+
+  <div class="services-list">
+    <ul>
+      <li>iOS development</li>
+      <li>Android development</li>
+      <li>Web development</li>
+      <li>UI/UX design</li>
+      <li>Testing</li>
+      <li>Launch</li>
+      <li>IT consulting</li>
+    </ul>
+  </div>
+</section>
+
+  <hr>
+
+  <section class="industries">
+    <h2>Developed more than 100 projects in 15 industries</h2>
+      <div class="industries-list">
+        <ul>
+          <li>Social media</li>
+          <li>Fitness and sport</li>
+          <li>Bank</li>
+          <li>AR Technology</li>
+          <li>Construction</li>
+          <li>Game projects</li>
+          <li>Education</li>
+          <li>Auto, transport</li>
+          <li>Medicine, health</li>
+          <li>Restaurants, food delivery</li>
+          <li>Marketplaces</li>
+          <li>AR technology</li>
+          <li>TV series</li>
+          <li>Startups</li>
+          <li>Religion</li>
+          <li>Online courses</li>
+        </ul>
+      </div>
+  </section>
+
+  <hr>
+
+  <section class="projects">
+    <h2>Projects we are proud of</h2>
+    <p>Our software development company is truly proud of the wonderful clients we have worked with. We enjoy a long-term
+      partnership</p>
+  
+    <div class="project-list">
+      <ul>
+        <li>I-teka</li>
+        <li>Dauletten</li>
+        <li>Guru Bosch</li>
+        <li>Santo</li>
+        <li>Home Credit Bank</li>
+        <li>BI Partners</li>
+        <li>Europharma</li>
+      </ul>
+      <button>View 100 more projects</button>
+    </div>
+  </section>
+  
+  <section class="project-details">
+    <article class="project">
+      <h3>I-teka</h3>
+      <p>The application is designed to search for drugs by availability in pharmacies in cities. During quarantine, the
+        application helped many people, which gives more value.</p>
+      <p>Business analysis / iOS / Android / QA / UI/UX Design</p>
+      <ul>
+        <li>Kazakhstan</li>
+        <li>Medicine</li>
+      </ul>
+      <p>400%</p>
+      <p>User Growth</p>
+      <p>+ 200 000</p>
+      <p>Active Users</p>
+      <img src="../img/i-teka.png" alt="Project preview">
+      <div class="image-section">
+        <img src="../img/google_play.png" alt="">
+        <img src="../img/ios.png" alt="">
+      </div>
+    </article>
+  </section>
+
+  <hr>
+
+  <section class="project-discussion">
+    <div class="project-overview">
+      <h2>Let's discuss Your project</h2>
+      <p>Let's figure out how to create an effective application, its cost and terms of its development</p>
+    </div>
+  
+    <div class="contact-form">
+      <form action="">
+        <label for="contact-phone">Best phone number</label>
+        <input type="tel" id="contact-phone" name="phone" placeholder="Phone">
+  
+        <label for="fullname">Full name</label>
+        <input type="text" id="fullname" name="name" placeholder="Your Full Name">
+  
+        <button type="submit">Discuss the project</button>
+      </form>
+    </div>
+  </section>
+    
+  <hr>
+  <section class="stages-section">
+    <h2>Application Development Stages</h2>
+    <div class="stages-grid">
+      <div class="stage-card">
+        <img src="../img/icon-1.png" alt="Analysis">
+        <h3>Analysis</h3>
+        <p>We write technical specifications for development, taking into account the business processes and technologies of the customer and the needs of users.</p>
+      </div>
+      <div class="stage-card">
+        <img src="../img/icon-1.png" alt="Design">
+        <h3>Design</h3>
+        <p>We adapt the customer's corporate identity to the platform guidelines. We draw convenient and understandable
+          interfaces.</p>       
+      </div>
+      <div class="stage-card">
+        <img src="../img/icon-1.png" alt="Development">
+        <h3>Development</h3>
+        <p>We create an extensible architecture, write clean and stable code. We integrate with customer technologies.</p>
+      </div>
+      <div class="stage-card">
+        <img src="../img/icon-1.png" alt="Testing">
+        <h3>Testing</h3>
+        <p>We carry out functional testing and do bug fixes. We adapt the application to different phone resolutions.</p>
+      </div>
+      <div class="stage-card">
+        <img src="../img/icon-1.png" alt="Launching">
+        <h3>Launching</h3>
+        <p>We design the application page and publish it in the App Store and Google Play stores.</p>
+      </div>
+      <div class="stage-card">
+        <img src="../img/icon-1.png" alt="Support">
+        <h3>Support</h3>
+        <p>We monitor the stability of the application, update it for new devices and versions of iOS and Android.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="team">
+    <h2>Our Team</h2>
+    <p>Thousand is a full-cycle digital production company with its own product analytics, design, web and mobile development.</p>
+    <p>28</p>
+    <p>team members</p>
+    <p>+100</p>
+    <p>projects</p>
+    <p>7 years</p>
+    <p>in IT sphere</p>
+    <p>All the necessary specialists - from a designer to a tester - are on our staff. We hire the best specialists in the
+    market. It's expensive but worth it</p>
+    <img src="../img/our_team.png" alt="Team photo">
+  </section>
+  <hr>
+
+  <section>
+    <h2>Get the book for free by leaving your contacts</h2>
+    <div class="contact-form">
+      <form action="">
+        <label for="contact-phone">Best phone number</label>
+        <input type="tel" id="contact-phone" name="phone" placeholder="Phone">
+    
+        <label for="fullname"></label>
+        <input type="text" id="fullname" name="name" placeholder="Your Full Name">
+        <label for="email">email</label>
+        <input type="email" id="email" name="email" placeholder="Your email">
+    
+        <button type="submit">Send me ebook to my mail</button>
+      </form>
+    </div>
+    <img src="../img/book.png" alt="Book">
+  </section>
+
+  <section class="faq">
+    <h2>FAQ</h2>
+    <details>
+      <summary>What is the cost of a mobile application?</summary>
+      <p>The cost depends on the complexity and features required.</p>
+    </details>
+    <details>
+      <summary>How long will development take?</summary>
+      <p>Development terms directly depend on the requirements for the mobile application, the characteristics of the company, as
+      well as the wishes of the customer.
+      
+      Average development time from start to finished application:
+      Medium projects up to 3 months.
+      Large projects about 4-6 months.
+      To get a more accurate estimate of the project completion time, it is necessary to determine the main task of the
+      application, think over its logic and functionality.</p>
+    </details>
+    <details>
+      <summary>Do you guarantee confidentiality?</summary>
+      <p>Yes, all information is kept confidential.</p>
+    </details>
+    <details>
+      <summary>I will not tell my idea, do you guarantee confidentiality?</summary>
+      <p></p>
+    </details>
+  </section>
+
+  <hr>
+
+  <footer class="footer">
+    <h2>IT WEBSITE</h2>
+    <div>
+      <p>Contact nums</p>
+      <p>+7 (777) 959 90 26</p>
+    </div>
+    <div>
+      <p>Post</p>
+      <p>mail@mail.com</p>
+    </div>
+    <div>
+      <p>Adress</p>
+      <p>City city, Street st. 90</p>
+    </div>
+    <div>
+      <p>Leave a request</p>
+      <p>Leave a request</p>
+    </div>
+    <p>We work the throughout world</p>
+  </footer>
+
 </body>
+
 </html>
