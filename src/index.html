@@ -1,18 +1,147 @@
-<!doctype html>
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="/src/assets/styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4LB</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<div class="test" style="color: blue">
-    test
-</div>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__wrapper">
+                <div class="header__logo">
+                    <a href="/" class="header__logo-link">
+                        <img src="assets/img/logo.svg" alt="Mobile applications" class="header__logo-pic">
+                    </a>
+                </div>
+                
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#!" class="header__link">Services</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#!" class="header__link">Media</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#!" class="header__link">Cases</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#!" class="header__link">FAQ</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#!" class="header__link">Contacts</a>
+                        </li>
+                    </ul>
+                    
+                </nav>
+                <nav class="header__nav">
+                    <div class="header__wrapper-contacts">
+                        <div class="header__phone-block">
+                            <div class="header__contact">
+                                <div class="header__icon-container">
+                                    <img src="assets/img/smartphone_outline.svg" alt="Phone icon" class="header__icon">
+                                </div>
+                                <ul class="header__contacts">
+                                    <li class="header__contact-item">
+                                        <a href="tel:+71111111111" class="header__contact-link">+7 (111) 111 11 11</a>
+                                    </li>
+                                    <li class="header__contact-item">
+                                        <a href="tel:+7111511111" class="header__contact-link">+7 (111) 111 11 11</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header__email-block">
+                            <div class="header__contact">
+                                <div class="header__icon-container">
+                                    <img src="assets/img/mail_outline.svg" alt="Mail icon" class="header__icon">
+                                </div>
+                                <ul class="header__contacts">
+                                    <li class="header__contact-item">
+                                        <a href="mailto:itcompany@mail.com" class="header__contact-link">itcompany@mail.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header> 
+    <main class="main">
+        <section class="intro">
+            <div class="wrapper">
+                <div class="intro__title">
+                    <h1>Development of
+                    <span class="highlight">mobile applications</span>
+                    and
+                    <span class="highlight">web services</span>
+                    of any complexity</h1>
+                    <p class="intro__subtitle">
+                        We create mobile applications for iOS, Android that transfer your business to mobile applications of your customers' devices
+                    </p>
+                </div>
+                <div class="form-container">
+                    <h2 class="form-title">Leave your contacts and we will call you back within 30 minutes</h2>
+                    <form class="form-contact">
+                        <div class="form-contact__item">
+                            <label for="contact-phone" class="form-contact__label">Phone number</label>
+                            <input type="tel" class="form-contact__field" id="contact-phone" name="phone"
+                                placeholder="+7 (___) ___-__-__">
+                        </div>
+                        <div class="form-contact__item">
+                            <label for="fullname" class="form-contact__label">Full name</label>
+                            <input type="text" class="form-contact__field" id="fullname" name="name" placeholder="Иван Иванов">
+                        </div>
+                        <button type="submit" class="form-contact__submit">Get consultation</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-<script src="index.js"></script>
+    </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__wrapper">
+                <h2 class="footer__title">IT WEBSITE</h2>
+                <div class="footer__content">
+                    <div class="footer__item">
+                        <div class="footer__item-title">
+                            <img src="assets/img/footer_smartphone_outline.svg" alt="Phone icon" class="footer__icon">
+                            <p>Contact nums</p>
+                        </div>
+                        <span>+7 (778) 395 90 26</span>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__item-title">
+                            <img src="assets/img/footer_mail_outline.svg" alt="Email icon" class="footer__icon">
+                            <p>Post</p>
+                        </div>
+                        <span>mail@mail.com</span>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__item-title">
+                            <img src="assets/img/footer_place_outline.svg" alt="Place icon" class="footer__icon">
+                            <p>Address</p>
+                        </div>                      
+                        <span>City city, street st. 90</span>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__item-title">
+                            <img src="assets/img/footer_document_outline.svg" alt="Document icon" class="footer__icon">
+                            <p>Leave a request</p>
+                        </div>                      
+                        <span>Leave a request</span>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <img src="assets/img/Vector.svg" alt="Vector icon" class="footer__icon">
+                    <p>We work throughout world</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
