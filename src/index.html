@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,12 +7,238 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="/src/assets/styles/style.css">
+
 </head>
 <body>
-<div class="test" style="color: blue">
-    test
-</div>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__wrapper">
+                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <label for="burger-checkbox" class="burger-toggle-425">
+                    <img src="./src/assets/img/burger425.svg" alt="burger" class="burger-img">
+                </label>
+                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <label for="burger-checkbox" class="burger-toggle-768">
+                    <img src="./src/assets/img/burger768.svg" alt="burger" class="burger-img">
+                </label>
+                <div class="header__logo">
+                    <a href="/" class="header__logo-link">
+                        <img src="./src/assets/img/logo.svg" alt="Mobile applications" class="header__logo-pic">
+                    </a>
+                </div>
+                <div class="burger-toggle"></div>
+                <!-- <div class="burger-toggle">
+                    <img src="./src/assets/img/close.svg" alt="Close" class="header__close">
+                </div> -->
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item burger-item">
+                            <a href="/" class="title_icon">IT WEBSITE</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#!" class="header__link">Services</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#!" class="header__link">Media</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#!" class="header__link">Cases</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#!" class="header__link">FAQ</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#!" class="header__link">Contacts</a>
+                        </li>
+                        <li class="header__item burger-item">
+                            <div>
+                                <img src="./src/assets/img/smartphone_outline.svg" alt="Phone icon" class="header__icon">
+                                <a href="tel:+71111111111" class="contact__icon">+7 (111) 111 11 11</a>
+                            </div>
+                            <div>
+                                <img src="./src/assets/img/smartphone_outline.svg" alt="Phone icon" class="header__icon">
+                                <a href="tel:+71111111111" class="contact__icon">+7 (111) 111 11 11</a>
+                            </div>
+                            <div>
+                                <img src="./src/assets/img/mail_outline.svg" alt="Mail icon" class="header__icon">
+                                <a href="mailto:itcompany@mail.com" class="contact__icon">itcompany@mail.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="header__nav">
+                    <div class="header__wrapper-contacts">
+                        <div class="header__phone-block">
+                            <div class="header__contact">
+                                <div class="header__icon-container">
+                                    <img src="./src/assets/img/smartphone_outline.svg" alt="Phone icon" class="header__icon">
+                                </div>
+                                <ul class="header__contacts">
+                                    <li class="header__contact-item">
+                                        <a href="tel:+71111111111" class="header__contact-link">+7 (111) 111 11 11</a>
+                                    </li>
+                                    <li class="header__contact-item">
+                                        <a href="tel:+71111111111" class="header__contact-link">+7 (111) 111 11 11</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="header__email-block">
+                    <div class="header__contact">
+                        <div class="header__icon-container">
+                            <img src="./src/assets/img/mail_outline.svg" alt="Mail icon" class="header__icon">
+                        </div>
+                        <ul class="header__contacts">
+                            <li class="header__contact-item">
+                                <a href="mailto:itcompany@mail.com" class="header__contact-link">itcompany@mail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="intro">
+            <div class="wrapper">
+                <div class="intro__wrapper">
+                    <div class="intro__title">
+                        <h1>Development of
+                        <span class="highlight">mobile applications</span>
+                        and
+                        <span class="highlight">web services</span>
+                        of any complexity</h1>
+                        <p class="intro__subtitle">
+                            We create mobile applications for iOS, Android that transfer your business to mobile applications of your customers' devices
+                        </p>
+                    </div>
+                    <div class="form-container">
+                        <h2 class="form-title">Leave your contacts and we will call you back within 30 minutes</h2>
+                        <form class="form-contact">
+                            <div class="form-contact__item">
+                                <label for="contact-phone" class="form-contact__label">Phone number</label>
+                                <input type="tel" class="form-contact__field" id="contact-phone" name="phone"
+                                placeholder="+7 (___) ___-__-__">
+                            </div>
+                            <div class="form-contact__item">
+                                <label for="fullname" class="form-contact__label">Full name</label>
+                                <input type="text" class="form-contact__field" id="fullname" name="name" placeholder="Иван Иванов">
+                            </div>
+                            <button type="submit" class="form-contact__submit">Get consultation</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <aside class="images-carousel">
+                <div class="images-carousel__column _left">
+                    <img src="./src/assets/img/column-left.webp" class="images-carousel__img" alt="">
+                    <!-- Дублируем изображения для бесконечной прокрутки -->
+                    <img src="./src/assets/img/column-left.webp" class="images-carousel__img" alt="">
+                </div>
+                <div class="images-carousel__column _right">
+                    <img src="./src/assets/img/column-right.webp" class="images-carousel__img" alt="">
+                    <!-- Дублируем изображения для бесконечной прокрутки -->
+                    <img src="./src/assets/img/column-right.webp" class="images-carousel__img" alt="">
+                </div>
+            </aside>
+        </section>
+        <section class="info-dev">
+            <div class="wrapper">
+                <div class="development__wrapper">
+                    <div class="technology">
+                        <div class="tech-title">
+                            <h2>Full development cycle</h2>
+                            <p>We use proven technologies</p>
+                        </div>
+                        <div class="tech-description">
+                            <h4>Web</h4>
+                            <p>PHP <span class="highlight">/</span> JavaScript <span class="highlight">/</span> Node.JS <span class="highlight">/</span> Web Socket <span class="highlight">/</span> Socket.io <span class="highlight">/</span> Vue.js <span class="highlight">/</span> Nuxt <span class="highlight">/</span> MySQL <span class="highlight">/</span> Laravel <span class="highlight">/</span> GO lang <span class="highlight">/</span> Django <span class="highlight">/</span> Python
+                            </p>
+                            <h4>Mobile</h4>
+                            <p>Swift <span class="highlight">/</span> Kotlin <span class="highlight">/</span> Alamofire <span class="highlight">/</span> Firebase <span class="highlight">/</span> CoreData <span class="highlight">/</span> Room <span class="highlight">/</span> Realm <span class="highlight">/</span> Coroutine <span class="highlight">/</span> RxJava <span class="highlight">/</span> RxSwift <span class="highlight">/</span> Unit Test <span class="highlight">/</span> Navigation</p>
 
-<script src="index.js"></script>
+                        </div>
+                    </div>
+                    <div class="development-menu">
+                        <ul>
+                            <li>
+                                <a href="#!">iOS development</a>
+                                <img src="./src/assets/img/chevron_right_small.svg" alt=">" class="chevron_right_small">                     
+                            </li>
+                            <li>
+                                <a href="#!">Android development</a>
+                                <img src="./src/assets/img/chevron_right_small.svg" alt=">" class="chevron_right_small">
+                            </li>
+                            <li>
+                                <a href="#!">Web development</a>
+                                <img src="./src/assets/img/chevron_right_small.svg" alt=">" class="chevron_right_small">
+                            </li>
+                            <li>
+                                <a href="#!">UI/UX design</a>
+                                <img src="./src/assets/img/chevron_right_small.svg" alt=">" class="chevron_right_small">
+                            </li>
+                            <li>
+                                <a href="#!">Testing</a>
+                                <img src="./src/assets/img/chevron_right_small.svg" alt=">" class="chevron_right_small">    
+                            </li>
+                            <li>
+                                <a href="#!">Launch</a>
+                                <img src="./src/assets/img/chevron_right_small.svg" alt=">" class="chevron_right_small">
+                            </li>
+                            <li>
+                                <a href="#!">IT consulting</a>
+                                <img src="./src/assets/img/chevron_right_small.svg" alt=">" class="chevron_right_small">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__wrapper">
+                <h2 class="footer__title">IT WEBSITE</h2>
+                <div class="footer__content">
+                    <div class="footer__item">
+                        <div class="footer__item-title">
+                            <img src="./src/assets/img/footer_smartphone_outline.svg" alt="Phone icon" class="footer__icon">
+                            <p>Contact nums</p>
+                        </div>
+                        <span>+7 (778) 395 90 26</span>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__item-title">
+                            <img src="./src/assets/img/footer_mail_outline.svg" alt="Email icon" class="footer__icon">
+                            <p>Post</p>
+                        </div>
+                        <span>mail@mail.com</span>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__item-title">
+                            <img src="./src/assets/img/footer_place_outline.svg" alt="Place icon" class="footer__icon">
+                            <p>Address</p>
+                        </div>
+                        <span>City city, street st. 90</span>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__item-title">
+                            <img src="./src/assets/img/footer_document_outline.svg" alt="Document icon" class="footer__icon">
+                            <p>Leave a request</p>
+                        </div>
+                        <span>Leave a request</span>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <img src="./src/assets/img/Vector.svg" alt="Vector icon" class="footer__icon">
+                    <p>We work throughout world</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
