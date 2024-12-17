@@ -1,0 +1,9 @@
+@import "assets/style/index.css";
+
+body {
+    margin: 0;
+}
+
+html {
+    font-family: 'HelveticaNeueCyr', sans-serif;
+}

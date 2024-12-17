@@ -21,3 +21,22 @@
          url("/static/fonts/Inter-Regular.woff2") format("woff");
     font-weight: 400;
 }
+
+@font-face {
+    font-family: "SF Pro Text";
+    src:url("../static/fonts/SFProText-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SF Pro Text";
+    src:url("../static/fonts/SFProText-Semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SF Pro Text";
+    src:url("../static/fonts/SFProText-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
