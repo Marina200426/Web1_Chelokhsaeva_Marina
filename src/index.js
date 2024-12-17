@@ -393,3 +393,4 @@ const game = {
     return direction !== oppositeDirections[this.snake.getLastStepDirection()];
   },
 };
+window.onload = game.init();
