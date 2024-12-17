@@ -26,6 +26,8 @@ function init() {
             el: document.getElementById('tic-tac-toe'),
             onMove,
         }
+
+        
     )
 
     game.startGame()
