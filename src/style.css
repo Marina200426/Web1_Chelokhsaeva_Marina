@@ -1,7 +1,7 @@
-@import "./global.css";
-@import "./fonts.css";
-@import "./utils.css";
-@import "./index.css";
+@import "global.css";
+@import "fonts.css";
+@import "utils.css";
+@import "index.css";
 
 .test {
     color: yellow !important;
