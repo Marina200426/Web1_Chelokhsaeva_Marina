@@ -256,6 +256,7 @@ const game = {
     this.map.init(this.config.getRowsCount(), this.config.getColsCount());
     this.setEventHandlers();
     this.reset();
+    
   },
 
   reset() {
@@ -263,6 +264,7 @@ const game = {
     this.snake.init(this.getStartSnakeBody(), "up");
     this.food.setCoordinates(this.getRandomFreeCoordinates());
     this.render();
+    console.log("Игра сброшена");
   },
 
   play() {
@@ -272,6 +274,7 @@ const game = {
       1000 / this.config.getSpeed()
     );
     this.setPlayButton("Стоп");
+    console.log("Игра запущена");
   },
 
   stop() {
@@ -287,6 +290,7 @@ const game = {
   },
 
   tickHandler() {
+    console.log("Тик игры");
     if (!this.canMakeStep()) {
       return this.finish();
     }
@@ -337,6 +341,7 @@ const game = {
 
   render() {
     this.map.render(this.snake.getBody(), this.food.getCoordinates());
+    console.log("Рендеринг завершен");
   },
 
   getRandomFreeCoordinates() {
@@ -412,8 +417,5 @@ const game = {
     return !this.snake.isOnPoint(nextHeadPoint);
   },
 };
-console.log("Игра инициализирована");
-console.log("Змейка инициализирована:", this.snake.getBody());
-console.log("Еда установлена:", this.food.getCoordinates());
-console.log("Рендеринг карты...");
+
 window.onload = game.init();
