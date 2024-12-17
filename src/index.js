@@ -75,8 +75,8 @@ function init() {
             let html = `
                 <div class="list-item" data-parent>
                     <div class="list-item__inner">
-                        <img class="list-item__arrow" src="/src/assets/img/chevron-down.png" alt="chevron-down" data-open>
-                        <img class="list-item__folder" src="/src/assets/img/folder.png" alt="folder">
+                        <img class="list-item__arrow" src="chevron-down.png" alt="chevron-down" data-open>
+                        <img class="list-item__folder" src="folder.png" alt="folder">
                         <span>${data.name}</span>
                     </div>
                     <div class="list-item__items">
@@ -95,8 +95,8 @@ function init() {
             return `
                 <div class="list-item" data-parent>
                     <div class="list-item__inner">
-                        <img class="list-item__arrow" src="/src/assets/img/chevron-down.png" alt="chevron-down" data-open>
-                        <img class="list-item__folder" src="/src/assets/img/folder.png" alt="folder">
+                        <img class="list-item__arrow" src="chevron-down.png" alt="chevron-down" data-open>
+                        <img class="list-item__folder" src="folder.png" alt="folder">
                         <span>${data.name}</span>
                     </div>
                 </div>
