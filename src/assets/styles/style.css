@@ -10,7 +10,12 @@
     color: red !important;
 }
 
-
+label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -21,12 +26,7 @@ body {
     background-color: #ffffff;
 }
 
-label {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 10px;
-    text-align: center;
-}
+
 .container {
     display: flex;
     flex-direction: row; /* Основное направление — в строку */
