@@ -22,26 +22,21 @@ body {
 }
 .container {
     display: flex;
-    flex-direction: column; /* Основное направление — в строку */
+    flex-direction: row; /* Основное направление — в строку */
     justify-content: center;
     align-items: flex-start; /* Выравнивание элементов сверху */
     gap: 40px; /* Отступ между блоками */
 }
 .pizza-type-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
-    justify-content: center;
 }
 .selection-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px; /* Увеличенное расстояние между секциями */
-    padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
+    gap: 30px;
 }
 .pizza-type-button {
     display: flex;
