@@ -24,7 +24,7 @@ body {
 
 .container {
     display: flex;
-    flex-direction: row; /* Основное направление — в строку */
+    flex-direction: column; /* Основное направление — в строку */
     justify-content: center;
     align-items: flex-start; /* Выравнивание элементов сверху */
     gap: 40px; /* Отступ между блоками */
