@@ -24,11 +24,19 @@ body {
 
 .container {
     display: flex;
-    flex-direction: column; /* Основное направление — в строку */
+    flex-direction: КЩЦ; /* Основное направление — в строку */
     justify-content: center;
     align-items: flex-start; /* Выравнивание элементов сверху */
     gap: 40px; /* Отступ между блоками */
 }
+
+.pizza-selection {
+    display: flex;
+    flex-direction: column; /* Размещаем элементы друг под другом */
+    align-items: center; /* Центрируем */
+    width: 100%; /* Растягиваем на всю ширину */
+}
+
 .pizza-type-container {
     display: flex;
     flex-direction: row;
