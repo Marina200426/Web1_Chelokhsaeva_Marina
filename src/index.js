@@ -24,7 +24,7 @@
 
 
         function selectPizzaType(pizzaType) {
-            console.log(`Выбрана пицца: ${pizzaType}`); // Добавьте лог для отладки
+            selectedPizzaType = pizzaType;
             document.querySelectorAll('.pizza-type-button').forEach(button => {
                 button.classList.remove('active');
             });
