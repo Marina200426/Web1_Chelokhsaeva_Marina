@@ -62,3 +62,22 @@ function selectTopping(topping) {
         updateTotal();
     }
 }
+
+        // Обновление итоговой стоимости и калорийности
+        function updateTotal() {
+            let totalPrice = prices[selectedPizzaType][selectedSize];
+            let totalCalories = calories[selectedPizzaType][selectedSize];
+
+            selectedToppings.forEach(topping => {
+                totalPrice += prices[topping];
+                totalCalories += calories[topping];
+            });
+
+            document.getElementById('totalPrice').textContent = totalPrice;
+            document.getElementById('totalCalories').textContent = totalCalories;
+        }
+
+        // По умолчанию выбираем "Пепперони", "Маленькая" и первую добавку
+        selectPizzaType('Пепперони');
+        selectSize('Маленькая');
+        selectTopping('Сырный бортик');
