@@ -27,7 +27,10 @@
             document.querySelectorAll('.pizza-type-button').forEach(button => {
                 button.classList.remove('active');
             });
-            document.getElementById(`${pizzaType}Button`).classList.add('active');
+            const selectedButton = document.getElementById(`${pizzaType}Button`);
+            if (selectedButton) {
+                selectedButton.classList.add('active');
+            }
             updateTotal();
         }
 
@@ -37,25 +40,27 @@
             document.querySelectorAll('.size-button').forEach(button => {
                 button.classList.remove('active');
             });
-            if (size === 'Маленькая') {
-                document.getElementById('smallButton').classList.add('active');
-            } else if (size === 'Большая') {
-                document.getElementById('largeButton').classList.add('active');
+            const selectedButton = document.getElementById(`${size === 'Маленькая' ? 'smallButton' : 'largeButton'}`);
+            if (selectedButton) {
+                selectedButton.classList.add('active');
             }
             updateTotal();
         }
 
         // Логика для выбора добавки
         function selectTopping(topping) {
-            const button = document.getElementById(`${topping.replace(/ /g, '')}Button`);
-            if (selectedToppings.includes(topping)) {
-                selectedToppings = selectedToppings.filter(item => item !== topping);
-                button.classList.remove('active');
-            } else {
-                selectedToppings.push(topping);
-                button.classList.add('active');
+            const buttonId = `${topping.replace(/ /g, '')}Button`;
+            const button = document.getElementById(buttonId);
+            if (button) {
+                if (selectedToppings.includes(topping)) {
+                    selectedToppings = selectedToppings.filter(item => item !== topping);
+                    button.classList.remove('active');
+                } else {
+                    selectedToppings.push(topping);
+                    button.classList.add('active');
+                }
+                updateTotal();
             }
-            updateTotal();
         }
 
         // Обновление итоговой стоимости и калорийности
