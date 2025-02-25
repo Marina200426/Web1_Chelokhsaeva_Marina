@@ -21,9 +21,10 @@
         let selectedSize = 'Маленькая';
         let selectedToppings = [];
 
-        // Логика для выбора вида пиццы
+
+
         function selectPizzaType(pizzaType) {
-            selectedPizzaType = pizzaType;
+            console.log(`Выбрана пицца: ${pizzaType}`); // Добавьте лог для отладки
             document.querySelectorAll('.pizza-type-button').forEach(button => {
                 button.classList.remove('active');
             });
