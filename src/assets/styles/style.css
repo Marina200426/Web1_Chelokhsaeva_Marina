@@ -18,16 +18,24 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
 }
 .container {
-    text-align: center;
+    display: flex;
+    flex-direction: row; /* Основное направление — в строку */
+    justify-content: center;
+    align-items: flex-start; /* Выравнивание элементов сверху */
+    gap: 40px; /* Отступ между блоками */
 }
 .pizza-type-container {
     display: flex;
+    flex-direction: column;
     gap: 10px;
-    margin-bottom: 20px;
-    justify-content: center;
+}
+.selection-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .pizza-type-button {
     display: flex;
@@ -59,9 +67,9 @@ body {
     color: #333;
 }
 .pizza-type-button.active {
-    border-color: #ff6f61 !important; 
-    background-color: #ff6f61 !important;
-    color: white !important;
+    border-color: #ff6f61 ; 
+    background-color: #ff6f61 ;
+    color: white ;
 }
 .pizza-type-button.active span {
     color: white;
@@ -70,7 +78,6 @@ body {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
-    justify-content: center;
 }
 .size-button {
     padding: 10px 20px;
@@ -96,7 +103,7 @@ body {
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin-bottom: 20px;
+    flex-wrap: wrap; /* Добавки переносятся на новую строку при необходимости */
 }
 .topping-button {
     display: flex;
@@ -128,9 +135,9 @@ body {
     color: #333;
 }
 .topping-button.active {
-    border-color: #ff6f61 !important;
-    background-color: #ff6f61 !important;
-    color: white !important;
+    border-color: #ff6f61 ;
+    background-color: #ff6f61 ;
+    color: white ;
 }
 .topping-button.active span {
     color: white;
