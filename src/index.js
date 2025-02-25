@@ -117,20 +117,18 @@ class Pizza {
 }
 
 function calculatePizza() {
-    // Получаем выбранные значения
+ 
     const pizzaType = document.getElementById('pizzaType').value;
     const pizzaSize = document.getElementById('pizzaSize').value;
     const toppings = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(el => el.value);
 
-    // Создаем объект пиццы
+
     const myPizza = new Pizza(pizzaType, pizzaSize);
     toppings.forEach(topping => myPizza.addTopping(topping));
 
-    // Рассчитываем стоимость и калорийность
     const price = myPizza.calculatePrice();
     const calories = myPizza.calculateCalories();
 
-    // Выводим результат
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = `
         <p><strong>Тип пиццы:</strong> ${myPizza.getType()}</p>
