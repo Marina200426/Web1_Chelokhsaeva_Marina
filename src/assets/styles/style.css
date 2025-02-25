@@ -59,9 +59,9 @@ body {
     color: #333;
 }
 .pizza-type-button.active {
-    border-color: #ff6f61;
-    background-color: #ff6f61;
-    color: white;
+    border-color: #ff6f61 !important; 
+    background-color: #ff6f61 !important;
+    color: white !important;
 }
 .pizza-type-button.active span {
     color: white;
@@ -128,9 +128,9 @@ body {
     color: #333;
 }
 .topping-button.active {
-    border-color: #ff6f61;
-    background-color: #ff6f61;
-    color: white;
+    border-color: #ff6f61 !important;
+    background-color: #ff6f61 !important;
+    color: white !important;
 }
 .topping-button.active span {
     color: white;
