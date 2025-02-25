@@ -17,40 +17,60 @@ const calories = {
     'Чеддер и пармезан': 150
 };
 
+// Соответствие русских названий `id` кнопок
+const pizzaIdMap = {
+    'Пепперони': 'pepperoniButton',
+    'Маргарита': 'margaritaButton',
+    'Баварская': 'bavarianButton'
+};
+
+const toppingIdMap = {
+    'Сырный бортик': 'cheeseCrustButton',
+    'Сливочная моцарелла': 'creamyMozzarellaButton',
+    'Чеддер и пармезан': 'cheddarParmesanButton'
+};
+
 let selectedPizzaType = 'Пепперони';
 let selectedSize = 'Маленькая';
 let selectedToppings = [];
 
-// Логика для выбора вида пиццы
+// Функция выбора вида пиццы
 function selectPizzaType(pizzaType) {
     selectedPizzaType = pizzaType;
+
     document.querySelectorAll('.pizza-type-button').forEach(button => {
         button.classList.remove('active');
     });
-    const selectedButton = document.getElementById(`${pizzaType}Button`);
+
+    const selectedButton = document.getElementById(pizzaIdMap[pizzaType]);
     if (selectedButton) {
         selectedButton.classList.add('active');
     }
+
     updateTotal();
 }
 
-// Логика для выбора размера
+// Функция выбора размера
 function selectSize(size) {
     selectedSize = size;
+
     document.querySelectorAll('.size-button').forEach(button => {
         button.classList.remove('active');
     });
-    const selectedButton = document.getElementById(`${size === 'Маленькая' ? 'smallButton' : 'largeButton'}`);
+
+    const selectedButton = document.getElementById(size === 'Маленькая' ? 'smallButton' : 'largeButton');
     if (selectedButton) {
         selectedButton.classList.add('active');
     }
+
     updateTotal();
 }
 
-// Логика для выбора добавки
+// Функция выбора добавки
 function selectTopping(topping) {
-    const buttonId = `${topping.replace(/ /g, '')}Button`;
+    const buttonId = toppingIdMap[topping];
     const button = document.getElementById(buttonId);
+
     if (button) {
         if (selectedToppings.includes(topping)) {
             selectedToppings = selectedToppings.filter(item => item !== topping);
@@ -63,21 +83,23 @@ function selectTopping(topping) {
     }
 }
 
-        // Обновление итоговой стоимости и калорийности
-        function updateTotal() {
-            let totalPrice = prices[selectedPizzaType][selectedSize];
-            let totalCalories = calories[selectedPizzaType][selectedSize];
+// Функция обновления итоговой стоимости и калорийности
+function updateTotal() {
+    let totalPrice = prices[selectedPizzaType][selectedSize];
+    let totalCalories = calories[selectedPizzaType][selectedSize];
 
-            selectedToppings.forEach(topping => {
-                totalPrice += prices[topping];
-                totalCalories += calories[topping];
-            });
+    selectedToppings.forEach(topping => {
+        totalPrice += prices[topping];
+        totalCalories += calories[topping];
+    });
 
-            document.getElementById('totalPrice').textContent = totalPrice;
-            document.getElementById('totalCalories').textContent = totalCalories;
-        }
+    document.getElementById('totalPrice').textContent = totalPrice;
+    document.getElementById('totalCalories').textContent = totalCalories;
+}
 
-        // По умолчанию выбираем "Пепперони", "Маленькая" и первую добавку
-        selectPizzaType('Пепперони');
-        selectSize('Маленькая');
-        selectTopping('Сырный бортик');
+// Установка значений по умолчанию
+document.addEventListener('DOMContentLoaded', () => {
+    selectPizzaType('Пепперони');
+    selectSize('Маленькая');
+    selectTopping('Сырный бортик');
+});
