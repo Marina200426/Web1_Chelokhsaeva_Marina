@@ -1,18 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="/src/assets/styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор пиццы</title>
+    <link rel="stylesheet" href="/src/assets/styles/style.css"> 
 </head>
 <body>
-<div class="test" style="color: blue">
-    test
-</div>
+    <div class="container">
+        <h1>Калькулятор пиццы</h1>
+        <label for="pizzaType">Тип пиццы:</label>
+        <select id="pizzaType">
+            <option value="Маргарита">Маргарита</option>
+            <option value="Пепперони">Пепперони</option>
+            <option value="Баварская">Баварская</option>
+        </select>
 
-<script src="index.js"></script>
+        <label for="pizzaSize">Размер пиццы:</label>
+        <select id="pizzaSize">
+            <option value="Маленькая">Маленькая</option>
+            <option value="Большая">Большая</option>
+        </select>
+
+        <label>Добавки:</label>
+        <label><input type="checkbox" value="сливочная моцарелла"> Сливочная моцарелла</label>
+        <label><input type="checkbox" value="сырный борт"> Сырный борт</label>
+        <label><input type="checkbox" value="чедер и пармезан"> Чедер и пармезан</label>
+
+        <button onclick="calculatePizza()">Рассчитать</button>
+
+        <div class="result" id="result">
+            <!-- Сюда выведется результат -->
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
 </body>
 </html>
