@@ -1,18 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="/src/assets/styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор пиццы</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
-<div class="test" style="color: blue">
-    test
-</div>
+    <div class="container">
+        <div class="pizza-button" onclick="selectPizza('Margarita')">
+            <img src="assets\img\margarita.png" alt="Маргарита">
+            <span>Маргарита</span>
+        </div>
+        <div class="pizza-button" onclick="selectPizza('Pepperoni')">
+            <img src="assets\img\pepperoni.png" alt="Пепперони">
+            <span>Пепперони</span>
+        </div>
+        <div class="pizza-button" onclick="selectPizza('Bavarian')">
+            <img src="assets\img\bavarian.png" alt="Баварская">
+            <span>Баварская</span>
+        </div>
 
-<script src="index.js"></script>
+        <label for="pizzaSize" style="font-size: 18px; margin-bottom: 10px; display: block;">Размер пиццы:</label>
+        <div class="size-container">
+            <div class="size-button" id="smallButton" onclick="selectSize('Маленькая')">Маленькая</div>
+            <div class="size-button" id="largeButton" onclick="selectSize('Большая')">Большая</div>
+        </div>
+
+        <!-- Выбор добавок -->
+        <label style="font-size: 18px; margin-bottom: 10px; display: block;">Добавить по вкусу:</label>
+        <div class="toppings-container">
+            <div class="topping-button" id="cheeseCrustButton" onclick="selectTopping('Сырный бортик')">
+                <img src="assets\img\cheeseCrust.png" alt="Сырный бортик">
+                <span>Сырный бортик</span>
+            </div>
+            <div class="topping-button" id="creamyMozzarellaButton" onclick="selectTopping('Сливочная моцарелла')">
+                <img src="assets\img\creamyMozzarella.jpg" alt="Сливочная моцарелла">
+                <span>Сливочная моцарелла</span>
+            </div>
+            <div class="topping-button" id="cheddarParmesanButton" onclick="selectTopping('Чеддер и пармезан')">
+                <img src="assets\img\cheddarParmesan.png" alt="Чеддер и пармезан">
+                <span>Чеддер и пармезан</span>
+            </div>
+        </div>
+
+        <!-- Кнопка "Добавить в корзину" -->
+        <button class="add-to-cart-button" id="addToCartButton">
+            Добавить в корзину за <span id="totalPrice">559</span> ₽ (<span id="totalCalories">900</span> кКалл)
+        </button>
+    </div>
+
+    <script src="index.js"></script> 
 </body>
 </html>
