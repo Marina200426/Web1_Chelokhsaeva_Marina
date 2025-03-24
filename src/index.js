@@ -1,85 +1,105 @@
-class Pizza {
-    constructor(type, size) {
-        this.type = type;
-        this.size = size;
-        this.toppings = [];
+// Данные о стоимости и калорийности
+const prices = {
+    Пепперони: { Маленькая: 900, Большая: 1000 },
+    Маргарита: { Маленькая: 600, Большая: 700 },
+    Баварская: { Маленькая: 800, Большая: 900 },
+    'Сырный бортик': 189,
+    'Сливочная моцарелла': 99,
+    'Чеддер и пармезан': 99
+};
+
+const calories = {
+    Пепперони: { Маленькая: 800, Большая: 1200 },
+    Маргарита: { Маленькая: 700, Большая: 1100 },
+    Баварская: { Маленькая: 900, Большая: 1300 },
+    'Сырный бортик': 200,
+    'Сливочная моцарелла': 150,
+    'Чеддер и пармезан': 150
+};
+
+// Соответствие русских названий `id` кнопок
+const pizzaIdMap = {
+    'Пепперони': 'pepperoniButton',
+    'Маргарита': 'margaritaButton',
+    'Баварская': 'bavarianButton'
+};
+
+const toppingIdMap = {
+    'Сырный бортик': 'cheeseCrustButton',
+    'Сливочная моцарелла': 'creamyMozzarellaButton',
+    'Чеддер и пармезан': 'cheddarParmesanButton'
+};
+
+let selectedPizzaType = 'Пепперони';
+let selectedSize = 'Маленькая';
+let selectedToppings = [];
+
+// Функция выбора вида пиццы
+function selectPizzaType(pizzaType) {
+    selectedPizzaType = pizzaType;
+
+    document.querySelectorAll('.pizza-type-button').forEach(button => {
+        button.classList.remove('active');
+    });
+
+    const selectedButton = document.getElementById(pizzaIdMap[pizzaType]);
+    if (selectedButton) {
+        selectedButton.classList.add('active');
     }
 
-    addTopping(topping) {
-        if (!this.toppings.includes(topping)) {
-            this.toppings.push(topping);
-        }
-    }
-
-    removeTopping(topping) {
-        this.toppings = this.toppings.filter(t => t !== topping);
-    }
-
-    calculatePrice() {
-        let price = {
-            'Маргарита': 500,
-            'Пепперони': 800,
-            'Баварская': 700
-        }[this.type] || 0;
-
-        price += this.size === 'Большая' ? 200 : 100;
-
-        const toppingPrices = {
-            'Сливочная моцарелла': 50,
-            'Сырный бортик': this.size === 'Большая' ? 300 : 150,
-            'Чеддер и пармезан': this.size === 'Большая' ? 300 : 150
-        };
-
-        this.toppings.forEach(t => price += toppingPrices[t] || 0);
-
-        return price;
-    }
-
-    calculateCalories() {
-        let calories = {
-            'Маргарита': 300,
-            'Пепперони': 400,
-            'Баварская': 450
-        }[this.type] || 0;
-
-        calories += this.size === 'Большая' ? 200 : 100;
-
-        const toppingCalories = {
-            'Сливочная моцарелла': 20,
-            'Сырный бортик': 50,
-            'Чеддер и пармезан': 50
-        };
-
-        this.toppings.forEach(t => calories += toppingCalories[t] || 0);
-
-        return calories;
-    }
+    updateTotal();
 }
 
-let selectedPizza = new Pizza('Маргарита', 'Маленькая');
-
-function updateUI() {
-    document.getElementById('totalPrice').textContent = selectedPizza.calculatePrice();
-    document.getElementById('totalCalories').textContent = selectedPizza.calculateCalories();
-}
-
-function selectPizzaType(type) {
-    selectedPizza.type = type;
-    updateUI();
-}
-
+// Функция выбора размера
 function selectSize(size) {
-    selectedPizza.size = size;
-    updateUI();
-}
+    selectedSize = size;
 
-function selectTopping(topping) {
-    if (selectedPizza.toppings.includes(topping)) {
-        selectedPizza.removeTopping(topping);
-    } else {
-        selectedPizza.addTopping(topping);
+    document.querySelectorAll('.size-button').forEach(button => {
+        button.classList.remove('active');
+    });
+
+    const selectedButton = document.getElementById(size === 'Маленькая' ? 'smallButton' : 'largeButton');
+    if (selectedButton) {
+        selectedButton.classList.add('active');
     }
-    updateUI();
+
+    updateTotal();
 }
 
-document.addEventListener('DOMContentLoaded', updateUI);
+// Функция выбора добавки
+function selectTopping(topping) {
+    const buttonId = toppingIdMap[topping];
+    const button = document.getElementById(buttonId);
+
+    if (button) {
+        if (selectedToppings.includes(topping)) {
+            selectedToppings = selectedToppings.filter(item => item !== topping);
+            button.classList.remove('active');
+        } else {
+            selectedToppings.push(topping);
+            button.classList.add('active');
+        }
+        updateTotal();
+    }
+}
+
+// Функция обновления итоговой стоимости и калорийности
+function updateTotal() {
+    let totalPrice = prices[selectedPizzaType][selectedSize];
+    let totalCalories = calories[selectedPizzaType][selectedSize];
+
+    selectedToppings.forEach(topping => {
+        totalPrice += prices[topping];
+        totalCalories += calories[topping];
+    });
+
+    document.getElementById('totalPrice').textContent = totalPrice;
+    document.getElementById('totalCalories').textContent = totalCalories;
+}
+
+// Установка значений по умолчанию
+document.addEventListener('DOMContentLoaded', () => {
+    selectPizzaType('Пепперони');
+    selectSize('Маленькая');
+    selectTopping('Сырный бортик');
+});
