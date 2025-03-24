@@ -1,20 +1,27 @@
 // Данные о стоимости и калорийности
-const prices = {
-    Пепперони: { Маленькая: 900, Большая: 1000 },
-    Маргарита: { Маленькая: 600, Большая: 700 },
-    Баварская: { Маленькая: 800, Большая: 900 },
-    'Сырный бортик': 189,
-    'Сливочная моцарелла': 99,
-    'Чеддер и пармезан': 99
+const basePrices = {
+    Пепперони: 800,
+    Маргарита: 500,
+    Баварская: 700
 };
 
-const calories = {
-    Пепперони: { Маленькая: 800, Большая: 1200 },
-    Маргарита: { Маленькая: 700, Большая: 1100 },
-    Баварская: { Маленькая: 900, Большая: 1300 },
-    'Сырный бортик': 200,
-    'Сливочная моцарелла': 150,
-    'Чеддер и пармезан': 150
+const baseCalories = {
+    Пепперони: 400,
+    Маргарита: 300,
+    Баварская: 450
+};
+
+// Доплата за размер
+const sizeModifiers = {
+    Большая: { price: 200, calories: 200 },
+    Маленькая: { price: 100, calories: 100 }
+};
+
+// Дополнения с разными ценами для маленькой и большой пиццы
+const toppings = {
+    'Сливочная моцарелла': { price: 50, calories: 20 },
+    'Сырный бортик': { Маленькая: { price: 150, calories: 50 }, Большая: { price: 300, calories: 50 } },
+    'Чеддер и пармезан': { Маленькая: { price: 150, calories: 50 }, Большая: { price: 300, calories: 50 } }
 };
 
 // Соответствие русских названий `id` кнопок
@@ -85,12 +92,19 @@ function selectTopping(topping) {
 
 // Функция обновления итоговой стоимости и калорийности
 function updateTotal() {
-    let totalPrice = prices[selectedPizzaType][selectedSize];
-    let totalCalories = calories[selectedPizzaType][selectedSize];
+    let totalPrice = basePrices[selectedPizzaType] + sizeModifiers[selectedSize].price;
+    let totalCalories = baseCalories[selectedPizzaType] + sizeModifiers[selectedSize].calories;
 
     selectedToppings.forEach(topping => {
-        totalPrice += prices[topping];
-        totalCalories += calories[topping];
+        if (topping in toppings) {
+            if (typeof toppings[topping] === 'object' && selectedSize in toppings[topping]) {
+                totalPrice += toppings[topping][selectedSize].price;
+                totalCalories += toppings[topping][selectedSize].calories;
+            } else {
+                totalPrice += toppings[topping].price;
+                totalCalories += toppings[topping].calories;
+            }
+        }
     });
 
     document.getElementById('totalPrice').textContent = totalPrice;
@@ -101,5 +115,4 @@ function updateTotal() {
 document.addEventListener('DOMContentLoaded', () => {
     selectPizzaType('Пепперони');
     selectSize('Маленькая');
-    selectTopping('Сырный бортик');
 });
