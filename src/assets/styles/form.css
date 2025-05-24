@@ -16,6 +16,6 @@ input[type="password"] {
 }
 
 input:focus {
-    border-color: #3300cc;
+    border-color: #cc7a00;
     outline: none;
 }
