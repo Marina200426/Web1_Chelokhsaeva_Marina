@@ -1,0 +1,21 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: #3300cc;
+    outline: none;
+}

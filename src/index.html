@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .todo-item { display: flex; align-items: center; margin: 5px 0; }
-        .todo-item input { margin-right: 10px; }
-        .delete-btn { margin-left: auto; color: red; cursor: pointer; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="assets\styles\style.css">
 </head>
 <body>
-    <h1>Todo List</h1>
-    <form id="todo-form">
-        <input type="text" id="todo-input" placeholder="Enter new todo" required>
-        <button type="submit">Add Todo</button>
-    </form>
-    <ul id="todo-list"></ul>
-    <script src="index.js"></script>
+  <h1>Todo List</h1>
+  
+  <div class="todo-form">
+    <input type="text" id="newTodoInput" placeholder="Новая задача">
+    <button id="addTodoBtn">Добавить</button>
+  </div>
+  
+  <div id="errorMessage" class="error"></div>
+  
+  <ul id="todoList" class="todo-list"></ul>
+
+  <script src="app.js"></script>
 </body>
 </html>
